@@ -1,0 +1,17 @@
+les pages de notre site web
+
+# la page a propos de moi
+# la page cv
+# la page projets
+# la page contact
+
+1. la page a propos de moi
+doit contenir les liens des autres pages
+
+une première section avec un div contenant une photo et quelques description
+deux lien dont un vers cv et l'autre vers projet
+
+un pied de page
+
+2. la page cv
+

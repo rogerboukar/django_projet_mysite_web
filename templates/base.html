@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Blog Personnel</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ol>
+          <h1>Kainwang Roger</h1>
+        </ol>
+        <ul>
+          <li><a href="{% url 'index' %}">Accueil</a></li>
+          <li><a href="{% url 'projet' %}">Projet</a></li>
+          <li><a href="{% url 'cv' %}">CV</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer">
+      <div class="foot-container">
+        <p>
+          &copy; 2024 Mon Blog Personnel Mentions légales
+          <br />
+          <br />Politique en matière de cookies <br /><br />
+          Politique de confidentialité <br /><br />
+          Conditions d'utilisation
+        </p>
+      </div>
+      <div class="container-tel">
+        <h3>Tel</h3>
+        <p>66 59 67 99</p>
+      </div>
+      <div class="container-email">
+        <h3>Email</h3>
+        <p>rogerboukar07@gmail.com</p>
+      </div>
+      <div class="container-online">
+        <h3>Online</h3>
+        <div class="foot-link">
+          <a href=""><img src="{% static 'images/facebook.png' %}" alt="" width="15px" /></a>
+          <a href=""><img src="{% static 'images/twitter.png' %}" alt="" width="15px" /></a>
+          <a href=""><img src="{% static 'images/linkedin.png' %}" alt="" width="15px" /></a>
+          <a href=""><img src="{% static 'images/camera.png' %}" alt="" width="15px" /></a>
+        </div>
+      </div>
+    </footer>
+    </body>
+</html>

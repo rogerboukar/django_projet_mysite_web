@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="nav-conct">
+      <div class="row-conct">
+        <h1>Contact me</h1>
+      </div>
+      <br />
+      <div class="conct-container conct">
+        <h1>Formulaire</h1>
+        <div class="form-container">
+          <form action="">
+            <p>Prénom</p>
+            <input type="text" name="prenom" required />
+
+            <p>Nom de famille</p>
+            <input type="text" name="nom" required />
+
+            <p>Email</p>
+            <input type="email" name="email" required />
+
+            <p>Objet</p>
+            <input type="text" name="objet" required />
+
+            <p>Message</p>
+            <textarea name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

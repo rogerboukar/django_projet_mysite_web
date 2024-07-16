@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="nav-left">
+      <div class="nav-center">
+        <div class="row">
+          <div class="col-img">
+            <div class="image-container">
+              <img
+                src="{% static 'images/kr.jpg' %}"
+                alt="Image"
+                class="rounded-image"
+                width="200px"
+              />
+              <br /><br />
+              <h1>Kainwang Roger</h1>
+              <h3>Data scientist</h3>
+              <br /><br />
+              <footer class="img-foot">
+                <a href=""
+                  ><img src="{% static 'images/facebook.png' %}" alt="" width="15px"
+                /></a>
+                <a href=""><img src="{% static 'images/twitter.png' %}" alt="" width="15px" /></a>
+                <a href=""
+                  ><img src="{% static 'images/linkedin.png' %}" alt="" width="15px"
+                /></a>
+                <a href=""><img src="{% static 'images/camera.png' %}" alt="" width="15px" /></a>
+              </footer>
+            </div>
+          </div>
+          <div class="col-text">
+            <h1>Hello</h1>
+            <h2>Qui je suis et ce que je fais</h2>
+            <br />
+            <div class="link-div">
+              <a href="{% url 'cv' %}" class="link-cv">CV</a>
+              <a href="{% url 'projet' %}" class="link-projet">PROJETS</a>
+            </div>
+            <br /><b></b>
+            <p>
+              Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez
+              sur « Modifier Texte » ou double-cliquez ici pour ajouter votre
+              contenu et personnaliser les polices.
+            </p>
+            <br />
+            <p>
+              Relatez ici votre parcours et présentez votre activité à vos
+              visiteurs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

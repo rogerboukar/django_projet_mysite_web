@@ -1,0 +1,479 @@
+/* styles.css */
+/* le css de la partie body et html en generale  */
+body,
+html {
+  scrollbar-width: 0px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica,
+    sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+/* fin du css de la partie body */
+
+/* css de la partie header */
+.header {
+  background-color: white; /* Couleur de fond du header */
+  color: #000; /* Couleur du texte du header */
+  position: fixed; /* Fixe le header en haut de la fenêtre */
+  width: 100%; /* Occupe toute la largeur de la fenêtre */
+  height: 120px;
+  top: 0; /* Place le header en haut de la fenêtre */
+  z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
+  display: flex; /* Utilisation de flexbox pour aligner les éléments */
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: center; /* Aligne les éléments au centre verticalement */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Ombre pour un effet visuel */
+  font-family: "Courier New", Courier, monospace;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-left: 70px;
+}
+
+.nav ol h1 {
+  padding: 0;
+}
+
+.header .nav ul {
+  list-style: none;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-left: 800px;
+  margin-right: 10px;
+}
+
+.header .nav ul li {
+  margin: 0 15px;
+  letter-spacing: 2px;
+}
+
+.header .nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header .nav ul li a:hover {
+  border-radius: 30px;
+  width: 80px;
+  text-align: center;
+  background-color: white;
+  border: 3px solid #ffa07a;
+  color: #000;
+}
+
+/* fin css de la partie header */
+
+/* css de la premer section */
+.nav-left {
+  background-color: #e2dbd3;
+  height: 130vh;
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+}
+
+.nv-center {
+  display: flex;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  width: 100vh;
+  height: 85vh;
+  margin-left: 350px;
+  padding-top: 200px;
+  justify-content: center;
+}
+.col-img {
+  flex: 1;
+  padding: 20px 10px 0; /* 20px en haut, 10px à gauche et à droite, 0 en bas */
+  background-color: rgba(241, 237, 232, 0.944);
+  margin-top: 100px;
+  border: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+}
+.col-text {
+  flex: 1;
+  padding: 20px 20px 0; /* 20px en haut, 10px à gauche et à droite, 0 en bas */
+  background-color: white;
+  margin-top: 100px;
+}
+
+.rounded-image {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 10px;
+  justify-content: center; /* Centre les liens horizontalement */
+  align-items: center; /* Centre les liens verticalement */
+}
+
+/* fin css de la partie section */
+
+/* la partie css du footer */
+
+.footer {
+  height: 30vh;
+  padding-top: 5px;
+  margin: auto;
+  background-color: #ffff;
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica;
+}
+
+.foot-container {
+  margin-left: 50px;
+  width: 110vh;
+  margin-right: 150px;
+}
+.foot-container p {
+  margin-right: 50px;
+}
+
+.container-tel {
+  width: 120px;
+  height: 100px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.container-tel h3 {
+  font-size: 15px;
+  text-align: center;
+}
+.container-tel p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.container-email {
+  width: 200px;
+  height: 100px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-email h3 {
+  font-size: 15px;
+  text-align: center;
+}
+.container-email p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.container-online {
+  width: 150px;
+  height: 100px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0 10px 10px 0;
+}
+
+.container-online h3 {
+  font-size: 15px;
+  text-align: center;
+}
+
+.foot-link {
+  display: flex;
+  justify-content: center; /* Centre les liens horizontalement */
+  align-items: center; /* Centre les liens verticalement */
+  gap: 10px;
+}
+
+/* fin de la partie css du footer  */
+
+/* la partie section css de la section et des images de la page acceuil */
+.col-text h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 30px;
+}
+
+.col-text h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.link-div {
+  display: flex;
+  justify-content: center; /* Centre les liens horizontalement */
+  align-items: center; /* Centre les liens verticalement */
+  gap: 20px;
+}
+.link-cv {
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  font-size: 15px; /* Taille de la police des liens */
+  color: white; /* Couleur du texte des liens */
+  padding: 10px 20px; /* Espacement intérieur des liens */
+  border-radius: 20px; /* Bords arrondis des liens */
+  background-color: rgb(17, 169, 215);
+  width: 70px;
+  text-align: center;
+  border: 2px solid;
+}
+
+.link-div :hover {
+  /* background-color: #ffa07a; Couleur de fond au survol */
+  border-radius: 30px;
+  width: 70px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid;
+  color: #000;
+}
+
+.link-projet {
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  font-size: 15px; /* Taille de la police des liens */
+  color: black; /* Couleur du texte des liens */
+  padding: 10px 20px; /* Espacement intérieur des liens */
+  border-radius: 20px; /* Bords arrondis des liens */
+  background-color: white;
+  width: 70px;
+}
+.img-foot {
+  display: flex;
+  justify-content: center; /* Centre les liens horizontalement */
+  align-items: center; /* Centre les liens verticalement */
+  gap: 10px; /* Espace entre les liens */
+}
+.img-foot a {
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  font-size: 15px; /* Taille de la police des liens */
+  color: black; /* Couleur du texte des liens */
+  padding: 10px 20px; /* Espacement intérieur des liens */
+  border-radius: 20px; /* Bords arrondis des liens */
+  background-color: white;
+}
+.image-container h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.image-container h3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* page de cv partie css */
+
+.nav-cv {
+  background-color: #e2dbd3;
+  height: 230vh;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding-top: 150px;
+}
+
+.row-cv {
+  display: flex;
+  margin-left: 200px;
+  margin-right: 230px;
+  justify-content: center;
+  margin-top: 50px;
+}
+.row-cv h1 {
+  font-weight: 800;
+  font-size: 25px;
+}
+.col-cv {
+  display: flex;
+  margin-left: 350px;
+  margin-right: 50px;
+  justify-content: center;
+  background-color: #ffa07a;
+  width: 170px;
+  border-radius: 30px;
+  height: 40px;
+  margin-top: 15px;
+  border: 2px;
+}
+
+.cv-container {
+  height: 350px;
+  width: 750px;
+  background-color: #ffff;
+  margin-left: 400px;
+  margin-right: 200px;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+}
+
+.download-link {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.download-link:hover {
+  background-color: white;
+  border-radius: 30px;
+  width: 170px;
+  text-align: center;
+  border: 2px solid;
+  color: #000;
+}
+
+.formation,
+.competence {
+  margin-left: 400px;
+  font-weight: 800;
+}
+
+.compt h1,
+h2 {
+  text-align: left;
+  font-size: 25px;
+  padding: 10px 50px;
+  font-weight: 600;
+}
+
+.compt ul {
+  padding-left: 70px;
+  justify-content: center;
+  margin-top: -10px;
+}
+.compt ul li {
+  font-size: 15px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+/* css de la page projet */
+.nav-projet {
+  background-color: #e2dbd3;
+  height: 180vh;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding-top: 150px;
+}
+.row-projet {
+  display: flex;
+  margin-left: 200px;
+  margin-right: 230px;
+  justify-content: center;
+  margin-top: 50px;
+}
+.row-projet h1 {
+  font-weight: 800;
+  font-size: 35px;
+}
+.projet-container {
+  height: 400px;
+  width: 750px;
+  background-color: #ffff;
+  margin-left: 400px;
+  margin-right: 200px;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+}
+
+.proj h1 {
+  text-align: left;
+  font-size: 25px;
+  padding: 10px 50px;
+}
+
+/* css de la page contact */
+
+.nav-conct {
+  background-color: #e2dbd3;
+  height: 140vh;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding-top: 150px;
+}
+
+.row-conct {
+  display: flex;
+  margin-left: 200px;
+  margin-right: 230px;
+  justify-content: center;
+  margin-top: 50px;
+}
+.row-conct h1 {
+  font-weight: 800;
+  font-size: 35px;
+}
+.conct-container {
+  height: 700px;
+  width: 750px;
+  background-color: white;
+  margin-left: 400px;
+  margin-right: 200px;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+}
+
+.conct h1 {
+  text-align: left;
+  font-size: 25px;
+  padding: 10px 50px;
+}
+/* css de la partie formulaire */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.form-container p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-container textarea {
+  height: 100px;
+}
+.form-container button {
+  width: 20%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.form-container button:hover {
+  background-color: #0056b3;
+}

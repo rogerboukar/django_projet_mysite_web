@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="nav-cv">
+      <div class="row-cv">
+        <h1 style="font-size: 35px">CURRICUM VITAE</h1>
+      </div>
+      <div class="row-cv">
+        <div class="col">
+          <h1>Experiences</h1>
+        </div>
+        <div class="col-cv">
+          <a
+            href="facture_kkiapay.pdf"
+            download="facture_kkiapay.pdf"
+            class="download-link"
+            >Télécharger CV</a
+          >
+        </div>
+      </div>
+      <div class="cv-container">
+        <h1></h1>
+      </div>
+      <h1 class="formation">Formations</h1>
+      <div class="cv-container">
+        <h1></h1>
+      </div>
+      <h1 class="competence">Compétences</h1>
+      <div class="cv-container compt">
+        <h1>competence</h1>
+        <div class="cv-lists">
+          <ul>
+            <li>Leadership</li>
+            <li>Travail en équipe</li>
+            <li>Analyse digitale</li>
+            <li>Leadership</li>
+          </ul>
+        </div>
+        <h2>Langue</h2>
+        <div class="cv-lists">
+          <ul class="cv-lists">
+            <li>English</li>
+            <li>French</li>
+            <li>​Arable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
