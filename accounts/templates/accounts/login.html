@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="section nav-contact">
+        <div class="login-title">
+          <h1>Login</h1>
+        </div>
+      <br />
+        <div class="container-login">
+          <div class="row-login">
+             <h1>Formulaire de Connection</h1>
+          </div>
+          <div class="form-login">
+
+            <form action="{% url 'login' %}" method="POST" class="login-form">
+                {% csrf_token %}
+            <p>Username</p>
+            <input type="text" name="username" required autofocus autocomplete="username" />
+
+            <p>Password</p>
+            <input type="password" name="password" required autocomplete="current-password" />
+
+            <button type="submit" class="btn btn-primary">Connecter</button>
+          </form>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+{% endblock %}
+

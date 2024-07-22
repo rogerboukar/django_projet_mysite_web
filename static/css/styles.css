@@ -6,10 +6,14 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica,
-    sans-serif;
-  background-color: white;
   color: #333;
+  background-color: #e2dbd3;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica,
+  sans-serif; */
+  font-family: 'Roboto', sans-serif;
 }
 
 /* fin du css de la partie body */
@@ -29,175 +33,230 @@ html {
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Ombre pour un effet visuel */
   font-family: "Courier New", Courier, monospace;
 }
-
-.nav {
+.navbar {
   display: flex;
   justify-content: center;
-  margin-left: 70px;
+  width:100%;
+}
+.name-kr, .name-link {
+    flex: 1;
+    margin-top: 20px;
+}
+.name-kr .name-link ul {
+  flex: 1;
+  width:100%;
+}
+.name-kr {
+  padding: 20px;
+  text-align: center;
+}
+.name-link {
+  padding: 10px;
+  text-align: center;
 }
 
-.nav ol h1 {
-  padding: 0;
-}
-
-.header .nav ul {
+.header .name-link ul {
   list-style: none;
   padding-top: 20px;
   display: flex;
   justify-content: center;
-  margin-left: 800px;
+  margin-left: 500px;
   margin-right: 10px;
 }
 
-.header .nav ul li {
-  margin: 0 15px;
+.header .name-link ul li {
+  margin: 0 10px;
   letter-spacing: 2px;
+  padding: 10px;
 }
 
-.header .nav ul li a {
-  color: #000;
+.header .name-link ul li a {
+  color: black;
   text-decoration: none;
   font-weight: bold;
-}
-
-.header .nav ul li a:hover {
   border-radius: 30px;
-  width: 80px;
-  text-align: center;
-  background-color: white;
-  border: 3px solid #ffa07a;
-  color: #000;
+  padding: 5px;
+}
+.header .navbar ul li a:hover {
+   color: #000;
+  text-decoration: none;
+  background-color: #ffa07a;
+  border: 2px solid;
 }
 
 /* fin css de la partie header */
 
+
 /* css de la premer section */
-.nav-left {
-  background-color: #e2dbd3;
-  height: 130vh;
-  width: 40%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    position: relative;
+}
+.section {
+    height: 150%;
+    width: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica;
+    margin-top: -30px;
+    background-color: #e2dbd3;
 }
 
-.nv-center {
-  display: flex;
-  justify-content: center;
+.sect-container {
+    background-color: white;
+    font-family: "Courier New", Courier, monospace;
 }
-.row {
-  display: flex;
-  width: 100vh;
-  height: 85vh;
-  margin-left: 350px;
-  padding-top: 200px;
-  justify-content: center;
+
+.nav-left {
+  height: 130vh;
+  width : 100%;
+  margin-top: 10px;
+  background: linear-gradient(to right, white 40%, #e2dbd3 30% );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+  font-family: "Courier New", Courier, monospace;
+}
+.container-fluid .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px; /* Ajustez la largeur selon vos besoins */
+    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    background-color: white; /* Juste pour visualiser la row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
 }
 .col-img {
   flex: 1;
-  padding: 20px 10px 0; /* 20px en haut, 10px à gauche et à droite, 0 en bas */
-  background-color: rgba(241, 237, 232, 0.944);
-  margin-top: 100px;
-  border: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+  background-color: #ffa07a;
+  height: 100%;
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un effet visuel */
 }
 .col-text {
   flex: 1;
-  padding: 20px 20px 0; /* 20px en haut, 10px à gauche et à droite, 0 en bas */
+  padding: 10px 20px 0; /* 20px en haut, 10px à gauche et à droite, 0 en bas */
   background-color: white;
-  margin-top: 100px;
 }
 
 .rounded-image {
   border-radius: 50%;
-  max-width: 100%;
-  height: auto;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 10px;
+  width: 200px;
+}
+.row .img-photo {
   justify-content: center; /* Centre les liens horizontalement */
   align-items: center; /* Centre les liens verticalement */
+  display: flex;
+  padding-top: 30px;
+}
+
+.row .img-foot {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.row .img-foot a {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.row h1 {
+    font-size: 25px;
+    text-align: center;
+}
+.row h3 {
+    font-size: 20px;
+    text-align: center;
 }
 
 /* fin css de la partie section */
+
+
 
 /* la partie css du footer */
 
 .footer {
   height: 30vh;
-  padding-top: 5px;
-  margin: auto;
-  background-color: #ffff;
+  padding: 20px;
+  background-color: white;
   display: flex;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  margin-top: -140px;
 }
 
-.foot-container {
-  margin-left: 50px;
-  width: 110vh;
-  margin-right: 150px;
+.footer .foot-1 {
+  margin-left: 30px;
+  width: 500px;
+  height: 200px;
+  margin-right: 320px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  padding: 10px;
 }
-.foot-container p {
+.footer .foot-1 p {
   margin-right: 50px;
 }
 
-.container-tel {
-  width: 120px;
-  height: 100px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
-.container-tel h3 {
-  font-size: 15px;
-  text-align: center;
-}
-.container-tel p {
-  font-size: 12px;
-  text-align: center;
-}
-
-.container-email {
-  width: 200px;
-  height: 100px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-email h3 {
-  font-size: 15px;
-  text-align: center;
-}
-.container-email p {
-  font-size: 12px;
-  text-align: center;
-}
-
-.container-online {
+.footer .foot-2 {
+  margin-left: 10px;
   width: 150px;
   height: 100px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0 10px 10px 0;
-}
-
-.container-online h3 {
+  margin-right: 10px;
+  font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   text-align: center;
+}
+.footer .foot-2 h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer .foot-3 {
+  margin-left: 10px;
+  width: 250px;
+  height: 100px;
+  margin-right: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+}
+.footer .foot-3 h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer .foot-4 {
+  margin-left: 10px;
+  width: 200px;
+  height: 100px;
+  margin-right: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+}
+.footer .foot-4 h3 {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .foot-link {
   display: flex;
   justify-content: center; /* Centre les liens horizontalement */
   align-items: center; /* Centre les liens verticalement */
-  gap: 10px;
+  gap: 20px;
 }
 
 /* fin de la partie css du footer  */
 
-/* la partie section css de la section et des images de la page acceuil */
+/* css de la page index partie section et des images de la page index */
 .col-text h1 {
   font-size: 60px;
   text-align: center;
@@ -213,39 +272,44 @@ html {
   display: flex;
   justify-content: center; /* Centre les liens horizontalement */
   align-items: center; /* Centre les liens verticalement */
-  gap: 20px;
+  gap: 40px;
 }
+
 .link-cv {
   text-decoration: none; /* Supprime la décoration par défaut des liens */
-  font-size: 15px; /* Taille de la police des liens */
-  color: white; /* Couleur du texte des liens */
-  padding: 10px 20px; /* Espacement intérieur des liens */
+  font-size: 12px; /* Taille de la police des liens */
+  color: black; /* Couleur du texte des liens */
+  padding: 10px; /* Espacement intérieur des liens */
   border-radius: 20px; /* Bords arrondis des liens */
-  background-color: rgb(17, 169, 215);
-  width: 70px;
+  width: 110px;
   text-align: center;
   border: 2px solid;
+  font-weight: bold;
+  background-color: #FFA07A;
 }
-
-.link-div :hover {
-  /* background-color: #ffa07a; Couleur de fond au survol */
-  border-radius: 30px;
-  width: 70px;
-  text-align: center;
-  background-color: white;
-  border: 2px solid;
-  color: #000;
+.link-cv:hover {
+    background-color: white;
+    border: 2px solid;
+    text-decoration: none;
 }
-
 .link-projet {
   text-decoration: none; /* Supprime la décoration par défaut des liens */
-  font-size: 15px; /* Taille de la police des liens */
+  font-size: 12px; /* Taille de la police des liens */
   color: black; /* Couleur du texte des liens */
-  padding: 10px 20px; /* Espacement intérieur des liens */
+  padding: 10px; /* Espacement intérieur des liens */
   border-radius: 20px; /* Bords arrondis des liens */
-  background-color: white;
-  width: 70px;
+  width: 110px;
+  text-align: center;
+  border: 2px solid;
+  font-weight: bold;
+  text-decoration: none;
 }
+.link-projet:hover {
+    background-color: #FFA07A;
+    border: 2px solid;
+    text-decoration: none;
+}
+
 .img-foot {
   display: flex;
   justify-content: center; /* Centre les liens horizontalement */
@@ -272,181 +336,227 @@ html {
   font-weight: 400;
   letter-spacing: 1px;
 }
+/* fin css de la page index et de la partie section */
+
 
 /* page de cv partie css */
 
 .nav-cv {
-  background-color: #e2dbd3;
-  height: 230vh;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-  padding-top: 150px;
+    background-color: #e2dbd3;
+    height: 170%;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding-top: 150px;
+}
+
+.cv-title {
+    align-items:center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align:center;
+}
+.cv-title h1 {
+     font-weight: 700;
+     font-size: 35px;
+     text-align: center;
 }
 
 .row-cv {
   display: flex;
-  margin-left: 200px;
-  margin-right: 230px;
   justify-content: center;
   margin-top: 50px;
 }
 .row-cv h1 {
-  font-weight: 800;
-  font-size: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
 }
-.col-cv {
-  display: flex;
-  margin-left: 350px;
-  margin-right: 50px;
-  justify-content: center;
-  background-color: #ffa07a;
-  width: 170px;
-  border-radius: 30px;
-  height: 40px;
-  margin-top: 15px;
-  border: 2px;
+.row-cv .col {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-.cv-container {
-  height: 350px;
-  width: 750px;
+.cv2 h1 {
+    background-color: #FFA07A;
+    padding: 10px;
+    border-radius: 10px;
+    width: 170px;
+}
+.row-cv .cv2 h1 a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+
+  background-color: white
+  padding: 5px;
+}
+.row-cv .cv2 h1:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid;
+}
+
+.row-cv .cv1 {
+    border-radius: 30px;
+    width: 50px;
+    margin-right: 100px;
+    margin-left: 350px;
+    padding-right: 70px;
+}
+
+.row-cv .cv2 {
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 100px;
+    padding-left: 70px;
+    background-color: ;
+}
+
+
+.cv {
+ height: 550px;
+  width: 300px;
   background-color: #ffff;
-  margin-left: 400px;
-  margin-right: 200px;
   justify-items: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
     /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
 }
 
-.download-link {
-  font-size: 15px;
-  color: white;
-  text-decoration: none;
-  padding-top: 10px;
-}
-
-.download-link:hover {
-  background-color: white;
-  border-radius: 30px;
-  width: 170px;
-  text-align: center;
-  border: 2px solid;
-  color: #000;
-}
-
-.formation,
-.competence {
-  margin-left: 400px;
-  font-weight: 800;
-}
-
-.compt h1,
-h2 {
+.cv h1 {
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px 50px;
-  font-weight: 600;
+  font-weight: bold;
 }
-
-.compt ul {
-  padding-left: 70px;
-  justify-content: center;
-  margin-top: -10px;
-}
-.compt ul li {
-  font-size: 15px;
-  padding-left: 10px;
+.cv h2 {
   text-align: left;
+  font-size: 20px;
+  padding: 10px 50px;
+  font-weight: bold;
 }
 
-/* css de la page projet */
+/* fin de css de la page cv*/
+
+
+
+/* css de la page projet ; */
 .nav-projet {
-  background-color: #e2dbd3;
-  height: 180vh;
-  width: 100%;
+  background-color:#e2dbd3 ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
   padding-top: 150px;
+  display: block;
+  width: auto; /* Prend toute la largeur disponible par défaut */
+  height: auto; /* S'ajuste à la hauteur du contenu */
 }
-.row-projet {
-  display: flex;
-  margin-left: 200px;
-  margin-right: 230px;
+.projet-title {
   justify-content: center;
   margin-top: 50px;
-}
-.row-projet h1 {
-  font-weight: 800;
-  font-size: 35px;
-}
-.projet-container {
-  height: 400px;
-  width: 750px;
-  background-color: #ffff;
-  margin-left: 400px;
-  margin-right: 200px;
-  display: block;
-  justify-items: center;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+  text-align:center;
 }
 
-.proj h1 {
-  text-align: left;
-  font-size: 25px;
-  padding: 10px 50px;
+.projet-title h1 {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
 }
+.proj {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 140vh; /* Prend au minimum toute la hauteur de la fenêtre */
+    width: 100%; /* Prend toute la largeur disponible */
+    background-color: #ffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Ombre principale */
+                0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la largeur */
+}
+
+.proj .name-projet h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+
+.proj .list-elements {
+    padding-top:15px;
+}
+
+.proj .list-elements h1 {
+     font-size: 15px;
+    text-align: right;
+    font-weight: bold;
+    padding: 10px;
+    width: 250px;
+    background-color: lightgray;
+    font-family: "Courier New", Courier, monospace;
+     margin-top:10px;
+}
+.proj .list-elements p {
+ font-size: 15px;
+ margin-top: 15px;
+ font-family: "Courier New", Courier, monospace;
+}
+
+
 
 /* css de la page contact */
 
-.nav-conct {
+.nav-contact {
   background-color: #e2dbd3;
-  height: 140vh;
+  height: 150%;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
   padding-top: 150px;
 }
 
-.row-conct {
+.contact-title {
   display: flex;
-  margin-left: 200px;
-  margin-right: 230px;
+  align-items:center;
   justify-content: center;
   margin-top: 50px;
+  text-align:center;
 }
-.row-conct h1 {
-  font-weight: 800;
+
+.contact-title h1 {
+  font-weight: 700;
   font-size: 35px;
+  text-align: center;
 }
-.conct-container {
-  height: 700px;
+
+.container-contact {
+  display: flex;
+  height: 500px;
+  margin: 0 auto;
   width: 750px;
-  background-color: white;
-  margin-left: 400px;
-  margin-right: 200px;
-  display: block;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
     /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
 }
-
-.conct h1 {
-  text-align: left;
-  font-size: 25px;
-  padding: 10px 50px;
-}
-/* css de la partie formulaire */
+                            /* css de la partie formulaire */
 .form-container {
+  display: bloc;
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 600px;
-  margin-left: 50px;
   margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
+.form-container .row-contact {
+    background-color: green;
+}
+
 .form-container p {
   margin: 10px 0 5px;
   font-weight: bold;
@@ -467,7 +577,7 @@ h2 {
 .form-container button {
   width: 20%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: green;
   color: white;
   border: none;
   border-radius: 4px;
@@ -475,5 +585,96 @@ h2 {
   font-size: 16px;
 }
 .form-container button:hover {
-  background-color: #0056b3;
+  background-color: #056803;
+}
+
+/*  #0056b3; hover
+    #007bff;
+*/
+
+/* css de la page login et signup */
+
+.container-login {
+  display: bloc;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.container-login .row-login {
+    background-color: green;
+}
+
+.container-login input[type="text"],
+.container-login input[type="password"],
+.container-login textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.container-login textarea {
+  height: 100px;
+}
+.form-login button {
+  width: 40%;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.container-login button:hover {
+  background-color: #056803;
+}
+.login-title {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align:center;
+}
+
+
+.login-title h1 {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+
+}
+
+.container-login p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.row-login h1 {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.name-kr p {
+  color: black;
+  border-radius: 30px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 70px;
+}
+.name-kr p a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.name-kr p:hover{
+  background-color: #ffa07a;
 }

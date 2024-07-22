@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mon Blog Personnel</title>
     {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
-        <ol>
-          <h1>Kainwang Roger</h1>
-        </ol>
-        <ul>
-          <li><a href="{% url 'index' %}">Accueil</a></li>
-          <li><a href="{% url 'projet' %}">Projet</a></li>
-          <li><a href="{% url 'cv' %}">CV</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
+      <nav class="navbar">
+        <div class="container name-kr">
+            <h1>Kainwang Roger</h1>
+          {% if user.is_authenticated %}
+          <h5> {{ user.username }} vous êtes connectez !</h5>
+          <p><a href="{% url 'logout' %}" class="link">Déconnexion</a></p>
+          {% else %}
+          <p><a href="{% url 'signup' %}" class="link">S'inscrire</a></p>
+          <p><a href="{% url 'login' %}" class="link">Se Connecter</a></p>
+          {% endif %}
+        </div>
+        <div class="container name-link">
+          <ul>
+            <li><a href="{% url 'index' %}" class="link">Accueil</a></li>
+            <li><a href="{% url 'projet' %}" class="link">Projet</a></li>
+            <li><a href="{% url 'cv' %}" class="link">CV</a></li>
+            <li><a href="{% url 'contact' %}" class="link">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     {% block content %}
     {% endblock %}
     <footer class="footer">
-      <div class="foot-container">
+      <div class="foot-1">
         <p>
           &copy; 2024 Mon Blog Personnel Mentions légales
           <br />
@@ -34,15 +48,15 @@
           Conditions d'utilisation
         </p>
       </div>
-      <div class="container-tel">
+      <div class="foot-2">
         <h3>Tel</h3>
         <p>66 59 67 99</p>
       </div>
-      <div class="container-email">
+      <div class="foot-3">
         <h3>Email</h3>
         <p>rogerboukar07@gmail.com</p>
       </div>
-      <div class="container-online">
+      <div class="foot-4">
         <h3>Online</h3>
         <div class="foot-link">
           <a href=""><img src="{% static 'images/facebook.png' %}" alt="" width="15px" /></a>
@@ -52,5 +66,8 @@
         </div>
       </div>
     </footer>
+     <!-- Bootstrap JS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.bundle.min.css' %}" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="section nav-contact">
+        <div class="login-title">
+          <h1>Signup</h1>
+        </div>
+      <br />
+        <div class="container-login">
+          <div class="row-login">
+             <h1>Formulaire d'inscription</h1>
+          </div>
+          <div class="form-login">
+
+            <form action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+            <p>Username</p>
+            <input type="text" name="username" required autofocus />
+
+            <p>Password</p>
+            <input type="password" name="password" required />
+
+            <button type="submit">S'inscrire</button>
+          </form>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+{% endblock %}
+

@@ -2,17 +2,69 @@
 {% load static %}
 
 {% block content %}
-    <section class="nav-projet">
-      <div class="row-projet">
-        <h1>MY PROJECTS</h1>
+    <section class="section nav-projet">
+      <div class="projet-title">
+        <h1>My Projects</h1>
       </div>
       <br /><br />
-      <div class="projet-container proj">
-        <h1>Premier projet</h1>
-      </div>
-      <br /><br />
-      <div class="projet-container proj">
-        <h1>Deuxieme projet</h1>
-      </div>
+      <div class="container proj">
+          <div class="name-projet">
+              <h1> LISTES DE PROJETS</h1>
+          </div>
+          <div class="list-elements">
+                {% for project in projects %}
+
+                 <div class="row">
+                    <div class="col-sm-3 ">
+                        <h1>TITLE:</h1>
+                    </div>
+                     <div class="col-sm-9 a">
+                         <p> {{ project.title }} </p>
+                    </div>
+                 </div>
+                <div class="row">
+                     <div class="col-sm-3 ">
+                            <h1>DATE_START:</h1>
+                 </div>
+                     <div class="col-sm-9 a">
+                         <p> {{ project.created_at }} </p>
+                    </div>
+                </div>
+              <div class="row">
+                <div class="col-sm-3 ">
+                    <h1>PROGRESS:</h1>
+                </div>
+                  <div class="col-sm-9 a">
+                    <p> {{ project.progress }} </p>
+                  </div>
+                </div>
+                <div class="row">
+                     <div class="col-sm-3 ">
+                         <h1>TYPE:</h1>
+                    </div>
+                 <div class="col-sm-9 a">
+                     <p> {{ project.type }} </p>
+                 </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 ">
+                        <h1>LINK:</h1>
+                     </div>
+                     <div class="col-sm-9 a">
+                        <p> {{ project.link }} </p>
+                    </div>
+                </div>
+                 <div class="row descpt">
+                     <div class="col-sm-3 ">
+                         <h1>DESCRIPTION:</h1>
+                     </div>
+                     <div class="col-sm-9 a">
+                        <p> {{ project.description }} </p>
+                     </div>
+                </div>
+              <br><br>
+          {% endfor %}
+          </div>
+       </div>
     </section>
 {% endblock %}

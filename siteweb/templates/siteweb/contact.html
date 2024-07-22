@@ -2,33 +2,48 @@
 {% load static %}
 
 {% block content %}
-    <section class="nav-conct">
-      <div class="row-conct">
-        <h1>Contact me</h1>
-      </div>
+    <section class="section nav-contact">
+        <div class="contact-title">
+          <h1>Contact me</h1>
+        </div>
       <br />
-      <div class="conct-container conct">
-        <h1>Formulaire</h1>
         <div class="form-container">
-          <form action="">
+          <div class="row-contact">
+             <h1>Formulaire</h1>
+          </div>
+
+            {% if messages %}
+              <div class="messages">
+                {% for message in messages %}
+                  <p>{{ message }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+          <div class="row-form">
+            <form action="{% url 'contact' %}" method="POST">
+              {% csrf_token %}
             <p>Prénom</p>
-            <input type="text" name="prenom" required />
+            <input type="text" name="name" required autofocus/>
 
             <p>Nom de famille</p>
-            <input type="text" name="nom" required />
+            <input type="text" name="lastname" required />
 
             <p>Email</p>
             <input type="email" name="email" required />
 
-            <p>Objet</p>
-            <input type="text" name="objet" required />
+            <p>Object</p>
+            <input type="text" name="object" required />
 
             <p>Message</p>
             <textarea name="message" required></textarea>
 
             <button type="submit">Envoyer</button>
           </form>
+          </div>
+
         </div>
       </div>
+
     </section>
 {% endblock %}

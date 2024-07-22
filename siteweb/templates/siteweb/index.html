@@ -1,34 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<section class="nav-left">
-      <div class="nav-center">
+<section class="section">
+  <div class="container-fluid sect-container">
+     <div class="container-fluid nav-left">
         <div class="row">
-          <div class="col-img">
-            <div class="image-container">
-              <img
-                src="{% static 'images/kr.jpg' %}"
-                alt="Image"
-                class="rounded-image"
-                width="200px"
-              />
-              <br /><br />
-              <h1>Kainwang Roger</h1>
-              <h3>Data scientist</h3>
-              <br /><br />
-              <footer class="img-foot">
-                <a href=""
-                  ><img src="{% static 'images/facebook.png' %}" alt="" width="15px"
-                /></a>
-                <a href=""><img src="{% static 'images/twitter.png' %}" alt="" width="15px" /></a>
-                <a href=""
-                  ><img src="{% static 'images/linkedin.png' %}" alt="" width="15px"
-                /></a>
-                <a href=""><img src="{% static 'images/camera.png' %}" alt="" width="15px" /></a>
-              </footer>
+          <div class="col-sm-5 col-md-6 col-img">
+            <div class="container img-photo">
+              <img src="{% static 'images/kr.jpg' %}" alt="Image" class="rounded-image" />
             </div>
+              <br /><br />
+              <h1>Kainwang Roger</h1><br>
+              <h3>Data scientist</h3>
+              <br />
+              <div class="img-foot">
+                <a href=""><img src="{% static 'images/facebook.png' %}" alt="" width="20px"/></a>
+                <a href=""><img src="{% static 'images/twitter.png' %}" alt="" width="20px" /></a>
+                <a href=""><img src="{% static 'images/linkedin.png' %}" alt="" width="20px"/></a>
+                <a href=""><img src="{% static 'images/camera.png' %}" alt="" width="20px" /></a>
+              </div>
           </div>
-          <div class="col-text">
+          <div class="col-sm-5 col-md-6 col-text">
             <h1>Hello</h1>
             <h2>Qui je suis et ce que je fais</h2>
             <br />
@@ -42,13 +34,12 @@
               sur « Modifier Texte » ou double-cliquez ici pour ajouter votre
               contenu et personnaliser les polices.
             </p>
-            <br />
             <p>
               Relatez ici votre parcours et présentez votre activité à vos
               visiteurs.
             </p>
           </div>
-        </div>
+          </div>
       </div>
     </section>
 
