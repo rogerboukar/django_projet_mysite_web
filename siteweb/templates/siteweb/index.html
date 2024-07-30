@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
-<section class="section">
-  <div class="container-fluid sect-container">
-     <div class="container-fluid nav-left">
-        <div class="row">
+  {% block content %}
+         <!-- Main Content Area -->
+    <div id="section1">
+    <div class="container1 my-5">
+      <!-- Section 1 -->
+        <!-- Content for Section 1 -->
+         <div class="row1">
           <div class="col-sm-5 col-md-6 col-img">
-            <div class="container img-photo">
+            <div class="container2 img-photo">
               <img src="{% static 'images/kr.jpg' %}" alt="Image" class="rounded-image" />
             </div>
-              <br /><br />
+              <br />
               <h1>Kainwang Roger</h1><br>
               <h3>Data scientist</h3>
               <br />
@@ -39,8 +41,24 @@
               visiteurs.
             </p>
           </div>
-          </div>
-      </div>
-    </section>
+        </div>
+    </div>
+  </div>
+    {% endblock %}
 
-{% endblock %}
+
+
+
+
+<!-- &lt;!&ndash; Main Content Area &ndash;&gt;-->
+<!--    <main class="container my-5">-->
+<!--      &lt;!&ndash; Section 1 &ndash;&gt;-->
+<!--      <section id="section1">-->
+<!--        &lt;!&ndash; Content for Section 1 &ndash;&gt;-->
+
+<!--      </section>-->
+
+<!--      &lt;!&ndash; Additional Sections as needed &ndash;&gt;-->
+<!--    </main>-->
+
+

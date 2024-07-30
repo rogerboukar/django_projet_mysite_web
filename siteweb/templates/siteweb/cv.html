@@ -2,24 +2,233 @@
 {% load static %}
 
 {% block content %}
-<section class="section nav-cv">
+ <!-- Main Content Area -->
+    <div id="section3">
+    <div class="container my-5">
+      <!-- Section 1 -->
+        <!-- Content for Section 1 -->
       <div class="cv-title">
         <h1>CURRICUM VITAE</h1>
       </div>
       <div class="row-cv">
-        <div class="col cv1">
-          <h1>Experiences</h1>
-        </div>
+          <div class="col cv1">
+            <h1>Experiences</h1>
+          </div>
         <div class="col cv2">
             <h1><a href="facture_kkiapay.pdf" download="facture_kkiapay.pdf" >Télécharger CV</a></h1>
         </div>
       </div>
-      <div class="container cv">
-        <h1>competence</h1>
-        <div class="cv-lists">
-
+        <div class="container">
+        <div class="my-cv">
+        <header>
+            {% for resume in resumes %}
+            <h1>{{ resume.name }}</h1>
+            <div class="contact-info">
+                <p><strong>Adresse :</strong> {{ resume.address }}</p>
+                <p><strong>Téléphone :</strong> {{ resume.phone }}</p>
+                <p><strong>Email :</strong> {{ resume.email }}</p>
+                <p><strong>Date et Lieu de Naissance :</strong> {{ resume.birth_date }}</p>
+                <p><strong>Nationalité :</strong> {{ resume.nationality }}</p>
+                <p><strong>Situation matrimoniale :</strong> {{ resume.marital_status }}</p>
+            </div>
+            {% endfor %}
+        </header>
         </div>
-      </div>
-    </section>
 
+        <div class="my-cv">
+        <section>
+            <h2 class="section-title">Profil</h2>
+            <div class="section-content">
+                {% for resume in resumes %}
+                <p>{{ resume.summary }}</p>
+                {% endfor %}
+            </div>
+        </section>
+        </div>
+
+        <div class="my-cv">
+        <section>
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="section-content">
+                <ul class="experience-list">
+                    {% for experience in experiences %}
+                        <li><strong>{{ experience.start_date|date:"d-m-Y" }}{% if experience.end_date|date:"d-m-Y" %} - {{ experience.end_date|date:"d-m-Y" }}{% endif %}: </strong>{{ experience.job_title }} at {{ experience.company }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        </div>
+
+        <div class="my-cv">
+        <section>
+            <h2 class="section-title">Formations et Diplômes Obtenus</h2>
+            <div class="section-content">
+                <ul class="education-list">
+                    {% for education in educations %}
+                        <li><strong>{{ education.start_date |date:"d-m-Y"}}{% if education.end_date|date:"d-m-Y" %} - {{ education.end_date|date:"d-m-Y" }}{% endif %}: </strong>{{ education.degree }} at {{ education.institution }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        </div>
+
+        <div class="my-cv">
+        <section>
+            <h2 class="section-title">Compétences</h2>
+            <div class="section-content">
+                <ul class="skills-list">
+                    {% for skill in skills %}
+                        <li>{{ skill.name }} - {{ skill.level }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        </div>
+
+        <div class="my-cv">
+        <section>
+            <h2 class="section-title">Langues</h2>
+            <div class="section-content">
+                <ul class="education-list">
+                    {% for lang in languages %}
+                        <li>
+                            <strong><p>laguage:</strong> {{ lang.language }} ({{ lang.proficiency }})</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        </div>
+    </div>
+
+<!--        <div class="container cv">-->
+
+<!--        &lt;!&ndash; Education Section &ndash;&gt;-->
+<!--                <h2>Education</h2>-->
+<!--                    {% for edu in education %}-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-3 ">-->
+<!--                    <h1>Institution:</h1>-->
+<!--                </div>-->
+<!--                <div class="col-sm-9 a">-->
+<!--                    <p>{{ edu.institution }}</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Degree:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ edu.degree }}</p>-->
+<!--            </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Start Date:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ edu.start_date }}</p>-->
+<!--            </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>End Date:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ edu.end_date }}</p>-->
+<!--            </div>-->
+<!--            </div>-->
+<!--            <div class="row descpt">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Description:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ edu.description }}</p>-->
+<!--            </div>-->
+<!--            </div>-->
+<!--                {% endfor %}-->
+<!--          <br>-->
+<!--    &lt;!&ndash; Experience Section &ndash;&gt;-->
+<!--        <h2>Experience</h2>-->
+<!--        {% for exp in experience %}-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Job Title:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ exp.job_title }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Company:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ exp.company }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Start Date:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ exp.start_date }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>End Date:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ exp.end_date }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row descpt">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Description:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ exp.description }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--          <br>-->
+<!--    &lt;!&ndash; Skill Section &ndash;&gt;-->
+<!--        <h2>Skill</h2>-->
+<!--        {% for sk in skill %}-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Name:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ sk.name }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Proficiency:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ sk.proficiency }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--          <br>-->
+<!--    &lt;!&ndash; Resume Section &ndash;&gt;-->
+<!--        <h2>Resume</h2>-->
+<!--        {% for res in resume %}-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-3 ">-->
+<!--                <h1>Summary:</h1>-->
+<!--            </div>-->
+<!--            <div class="col-sm-9 a">-->
+<!--                <p>{{ res.summary }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--      </div>-->
+        </div>
+    </div>
 {% endblock %}

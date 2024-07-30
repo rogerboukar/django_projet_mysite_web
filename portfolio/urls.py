@@ -13,6 +13,7 @@ urlpatterns = [
     path('', home, name='index'),
     path('projet/', projet, name='projet'),
     path('cv/', cv, name='cv'),
+    # path('cv/<int:pk>/', cv_detail, name='detail'),
     path('contact/', contact, name='contact'),
     path('signup/', signup, name='signup'),
     path('login/', login_user, name='login'),

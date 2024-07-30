@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+ <!-- Main Content Area -->
+    <!-- Main Content Area -->
+    <div id="section3">
+    <div class="container my-5">
+      <!-- Section 1 -->
+        <!-- Content for Section 1 -->
+      <div class="cv-title">
+        <h1>CURRICUM VITAE</h1>
+      </div>
+      <div class="row-cv">
+          <div class="col cv1">
+            <h1>Experiences</h1>
+          </div>
+        <div class="col cv2">
+            <h1><a href="facture_kkiapay.pdf" download="facture_kkiapay.pdf" >Télécharger CV</a></h1>
+        </div>
+      </div>
+
+<!--#################################################################-->
+        <div class="my-cv">
+            <h1>{{ resumes.name }}</h1>
+            <div class="contact-info">
+                <p><strong>Adresse :</strong> {{ resumes.address }}</p>
+                <p><strong>Téléphone :</strong> {{ resumes.phone }}</p>
+                <p><strong>Email :</strong> {{ resume.email }}</p>
+                <p><strong>Date et Lieu de Naissance :</strong> {{ resumes.birth_date }}</p>
+                <p><strong>Nationalité :</strong> {{ resumes.nationality }}</p>
+                <p><strong>Situation matrimoniale :</strong> {{ resumes.marital_status }}</p>
+            </div>
+        </div>
+
+        <div class="my-cv">
+
+        <!-- Education Section -->
+            <h2>Education</h2>
+            <hr class="custom-hr">
+            {% for edu in educations %}
+                <strong> <p> Institution:  </strong>{{ edu.institution }} </p>
+                <strong> <p> Degree:  </strong>{{edu.degree }}</p>
+                <strong> <p> Start Date:  </strong>{{ edu.start_date }}</p>
+                <strong> <p> End Date:  </strong>{{ edu.end_date }}</p>
+                <strong> <p>Description:  </strong>{{ edu.description }}</p>
+            <hr class="custom-hr">
+            {% endfor %}
+          </div>
+
+        <div class="my-cv">
+            <!-- Experience Section -->
+            <h2>Experience</h2>
+            <hr class="custom-hr">
+                {% for exp in experiences %}
+                <strong><p>Job Title: </strong>{{ exp.job_title }}</p>
+                <strong><p>Company: </strong> {{ exp.company }}</p>
+                <strong><p>Start Date: </strong>{{ exp.start_date }}</p>
+                <strong><p>End Date: </strong>{{ exp.end_date }}</p>
+                <strong><p>Description: </strong>{{ exp.description }}</p>
+            <hr class="custom-hr">
+            {% endfor %}
+        </div>
+
+          <div class="my-cv">
+                <!-- Skill Section -->
+              <h2>Skill</h2>
+              <hr class="custom-hr">
+              {% for sk in skills %}
+              <strong><p>Name:</strong> {{ sk.name }}</p>
+              <strong><p>level:</strong> {{ sk.level }}</p>
+              <hr class="custom-hr">
+            {% endfor %}
+        </div>
+
+         <div class="my-cv">
+                <!-- Skill Section -->
+              <h2>Language</h2>
+             <hr class="custom-hr">
+              {% for lan in languages %}
+              <strong><p>laguage:</strong> {{ lan.language }}</p>
+              <strong><p>Proficiency: </strong>{{ lan.proficiency }}</p>
+             <hr class="custom-hr">
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,815 @@
+/* styles.css */
+/*######################################################## */ /* start html and body css */
+/* Style global */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #333;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Form */
+form .form-control {
+    margin-bottom: 15px;
+}
+
+form .btn {
+    width: 100%;
+}
+.container .row {
+    height: 500px;
+    margin: 20px;
+}
+/*######################################################## */ /* end html and body css */
+
+/*######################################################## *//* start main, header and Navbar  css for index page */
+.main {
+    position: fixed;
+    top: 0; /* Place le header en haut de la fenêtre */
+    z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+.container {
+    background-color: bg-light;
+}
+/* Navbar bg-light;*/
+.navbar-brand {
+    font-weight: bold;
+}
+
+.main .navbar {
+    background-color: bg-light;
+    color: #000;
+    margin-right: 30px;
+    margin-top: 0;
+    width: 700px;
+    margin-bottom:50px;
+}
+
+.main .head-class {
+     width: 500px;
+     margin-left: 90px;
+}
+
+/* Header */
+header.head-class .container{
+    color: #000;
+    margin-bottom: 0;
+    padding: 10px;
+    height: 120px;
+}
+header.head-class .container p a:hover {
+    background-color: #FFA07A;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+#navbarNav ul li a {
+      margin-right: 25px;
+      padding: 4px;
+}
+
+#navbarNav ul li a:hover{
+   color: #000;
+  text-decoration: none;
+  background-color: #ffa07a;
+  border: 1px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px;
+}
+
+/*######################################################## *//* start css section1 page index */
+/* Main content */
+#section1 {
+    padding: 30px 0;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+#section1 .container1 {
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(to right, #ffa07a 40%, white 30%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#section1 .container1 .row1 {
+    background-color: #007bff;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    border: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#section1 .container1 .row1 h1{
+    text-align: center;
+}
+
+#section1 .container1 .row1 h3{
+    text-align: center;
+}
+#section1 .container1 .row1 .img-foot{
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#section1 .container1 .row1 .img-foot a {
+    margin-right: 10px;
+    padding: 10px;
+}
+}
+
+#section1 .container1 .row1 .container2 {
+    display: flex;
+    padding: 20px;
+     justify-content: center;
+    align-items: center;
+}
+#section1 .container1 .row1 .img-photo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 30px;
+}
+/*######################################################## */ /* start css footer */
+/* Footer */
+footer {
+    background: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+footer .container3 {
+    width: 100%;
+    padding: 20px;
+}
+.foot-link a {
+    margin: 0 10px;
+}
+
+footer .foot-1 {
+  width: 500px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 350px;
+}
+footer .foot-1 p {
+  margin-right: 50px;
+}
+
+footer .foot-2 {
+  width: 150px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+}
+footer .foot-2 h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .foot-3 {
+  width: 250px;
+  height: 100px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+}
+footer .foot-3 h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .foot-4 {
+  width: 200px;
+  height: 100px;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+}
+footer .foot-4 h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+foot-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+/*######################################################## */ /* end footer css */
+
+/*########################################################  start row css for section in index page for centering log image*/
+.col-img {
+  flex: 1;
+  background-color: #ffa07a;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.col-text {
+  flex: 1;
+  padding: 10px 20px 0;
+  background-color: white;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.rounded-image {
+  border-radius: 50%;
+  width: 200px;
+}
+.row .img-photo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 30px;
+}
+
+.row .img-foot {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.row .img-foot a {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.row h1 {
+    font-size: 25px;
+    text-align: center;
+}
+.row h3 {
+    font-size: 20px;
+    text-align: center;
+}
+.col-text h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 30px;
+}
+
+.col-text h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.link-div {
+  display: flex;
+  justify-content: center; /* Centre les liens horizontalement */
+  align-items: center; /* Centre les liens verticalement */
+  gap: 40px;
+}
+
+.link-cv {
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  font-size: 12px; /* Taille de la police des liens */
+  color: black; /* Couleur du texte des liens */
+  padding: 10px; /* Espacement intérieur des liens */
+  border-radius: 20px; /* Bords arrondis des liens */
+  width: 110px;
+  text-align: center;
+  border: 2px solid;
+  font-weight: bold;
+  background-color: #FFA07A;
+}
+.link-cv:hover {
+    background-color: white;
+    border: 2px solid;
+    text-decoration: none;
+}
+.link-projet {
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  font-size: 12px; /* Taille de la police des liens */
+  color: black; /* Couleur du texte des liens */
+  padding: 10px; /* Espacement intérieur des liens */
+  border-radius: 20px; /* Bords arrondis des liens */
+  width: 110px;
+  text-align: center;
+  border: 2px solid;
+  font-weight: bold;
+  text-decoration: none;
+}
+.link-projet:hover {
+    background-color: #FFA07A;
+    border: 2px solid;
+    text-decoration: none;
+}
+
+.img-foot {
+  display: flex;
+  justify-content: center; /* Centre les liens horizontalement */
+  align-items: center; /* Centre les liens verticalement */
+  gap: 10px; /* Espace entre les liens */
+}
+.img-foot a {
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  font-size: 15px; /* Taille de la police des liens */
+  color: black; /* Couleur du texte des liens */
+  padding: 10px 20px; /* Espacement intérieur des liens */
+  border-radius: 20px; /* Bords arrondis des liens */
+  background-color: white;
+}
+.image-container h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.image-container h3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/*######################################################## end section centering for index page*/
+
+/*######################################################## start section2 centering for project page*/
+
+#section2 {
+
+}
+
+#section2 {
+    padding: 30px 0;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+#section2 .container {
+    height: 100%;
+    width: 1000px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#section2 .container .projet-title {
+  justify-content: center;
+  text-align:center;
+  padding-top: 100px;
+}
+
+#section2 .container .projet-title h1{
+   font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  padding: 5px;
+
+  }
+
+#section2 .container .proj h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+
+.custom-hr {
+   border: 2px solid;
+   height: 2px;
+   background: linear-gradient(to right, red, blue);
+   margin: 20px 0;
+
+   }
+#section2 .container .my-proj{
+    height: 100%;
+    width: 800px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+    margin-left: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+    font-family: 'Times New Roman', Arial, sans-serif;
+}
+
+#section2 .container .my-proj .section-content{
+      background-color: green;
+}
+/* ########################################################### end section2 css for project page*/
+
+
+/* ########################################################### start section3 css for cv page*/
+
+#section3 {
+    padding: 30px 0;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+#section3 .container {
+    height: 100%;
+    width: 1000px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#section3 .container .cv-title {
+    align-items:center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align:center;
+    padding-top: 100px;
+
+}
+#section3 .container .cv-title h1 {
+     font-weight: 700;
+     font-size: 35px;
+     text-align: center;
+}
+
+#section3 .container .row-cv {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#section3 .container .row-cv h1 {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 5px;
+}
+#section3 .container .row-cv .col {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#section3 .container .cv2 h1 {
+    background-color: #FFA07A;
+    padding: 10px;
+    border-radius: 10px;
+    width: 190px;
+    font-size: 20px;
+}
+#section3 .container .row-cv .cv2 h1 a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+}
+#section3 .container .row-cv .cv2 h1:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid;
+}
+
+#section3 .container .row-cv .cv1 {
+    border-radius: 30px;
+    width: 50px;
+    margin-right: 100px;
+    margin-left: 350px;
+    padding-right: 70px;
+}
+
+#section3 .container .row-cv .cv2 {
+    border-radius: 30px;
+    margin-right: 400px;
+    margin-left: 100px;
+    padding-left: 70px;
+    background-color: ;
+}
+
+
+#section3 .container .cv {
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+}
+#section3 .container .cv .row {
+    height: 40px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items:center;
+
+}
+#section3 .container .cv h1 {
+  text-align: left;
+  font-size: 15px;
+  padding: 10px 50px;
+  font-weight: bold;
+  text-align: right;
+  font-weight: bold;
+  width: 250px;
+  background-color: lightgray;
+  font-family: "Courier New", Courier, monospace;
+    margin-left: 50px;
+}
+#section3 .container .cv h2 {
+  text-align: left;
+  font-size: 15px;
+  padding: 10px 50px;
+  font-weight: bold;
+}
+#section3 .container .cv p {
+    margin-left : 170px;
+    font-family: "Courier New", Courier, monospace;
+}
+#section3 .container .my-cv{
+    height: 100%;
+    width: 800px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 30px;
+    margin-left: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+    font-family: 'Times New Roman', Arial, sans-serif;
+}
+
+/*########################################################## css de la partie cv mis en commentaire dans le fichier cv.HTML*/
+.section-title {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills-list, .education-list, .experience-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li, .education-list li, .experience-list li {
+            margin-bottom: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+
+/*########################################################## fin de css de la partie cv mis en commentaire dans le fichier cv.HTML*/
+
+/* ############################################################* css for contact page*/
+
+#section4 {
+    padding: 30px 0;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+#section4 .container {
+    height: 100%;
+    width: 1000px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#section4 .container .contact-title {
+  align-items:center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align:center;
+    padding-top: 100px;
+}
+
+#section4 .container .contact-title h1 {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+}
+
+}
+#section4 .container .contact-form .row-contact h1{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+
+
+#section4 .container .contact-form {
+  display: bloc;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.contact-form .row-contact {
+    background-color: green;
+}
+
+.contact-form p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form textarea {
+  height: 100px;
+}
+.contact-form button {
+  width: 20%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.contact-form button:hover {
+  background-color: #056803;
+}
+
+/* ########################################################## css for login    nd signup page formular*/
+
+#section5 {
+    padding: 30px 0;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+#section5 .container {
+    height: 100%;
+    width: 1000px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#section5 .container .container-login {
+  display: bloc;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 400px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#section5 .container .container-login .row-login {
+    background-color: green;
+}
+
+#section5 .container .container-login input[type="text"],
+#section5 .container .container-login input[type="password"]{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#section5 .container .container-login textarea {
+  height: 100px;
+}
+#section5 .container .form-login button {
+  width: 90px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#section5 .container .container-login button:hover {
+  background-color: #056803;
+}
+#section5 .container .login-title {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align:center;
+}
+
+
+#section5 .container .login-title h1 {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+
+}
+
+#section5 .container .container-login p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+#section5 .container .row-login h1 {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#section5 .container .form-login .btn {
+   width: 90px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#section5 .container .form-login .btn:hover {
+  background-color: white;
+  color:#000;
+}
+
+#section5 .container .container-login .signup .btn{
+    background-color: green;
+    width: 100px;
+    font-size: 15px;
+}
+#section5 .container .container-login .signup .btn:hover {
+  background-color: white;
+  border-radius: 5px;
+}
+
+ .name-kr p {
+  color: black;
+  border-radius: 30px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 70px;
+}
+ .name-kr p a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.name-kr p:hover{
+  background-color: #ffa07a;
+}
+/* ##############################################################end css for login and signup page formular*/

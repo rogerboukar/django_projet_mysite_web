@@ -1,70 +1,30 @@
 {% extends 'base.html' %}
-{% load static %}
-
 {% block content %}
-    <section class="section nav-projet">
+
+     <!-- Main Content Area -->
+    <div id="section2">
+    <div class="container my-5">
+      <!-- Section 1 -->
+        <!-- Content for Section 1 -->
       <div class="projet-title">
         <h1>My Projects</h1>
       </div>
-      <br /><br />
+      <br />
       <div class="container proj">
-          <div class="name-projet">
               <h1> LISTES DE PROJETS</h1>
-          </div>
-          <div class="list-elements">
-                {% for project in projects %}
+      </div>
 
-                 <div class="row">
-                    <div class="col-sm-3 ">
-                        <h1>TITLE:</h1>
-                    </div>
-                     <div class="col-sm-9 a">
-                         <p> {{ project.title }} </p>
-                    </div>
-                 </div>
-                <div class="row">
-                     <div class="col-sm-3 ">
-                            <h1>DATE_START:</h1>
-                 </div>
-                     <div class="col-sm-9 a">
-                         <p> {{ project.created_at }} </p>
-                    </div>
-                </div>
-              <div class="row">
-                <div class="col-sm-3 ">
-                    <h1>PROGRESS:</h1>
-                </div>
-                  <div class="col-sm-9 a">
-                    <p> {{ project.progress }} </p>
-                  </div>
-                </div>
-                <div class="row">
-                     <div class="col-sm-3 ">
-                         <h1>TYPE:</h1>
-                    </div>
-                 <div class="col-sm-9 a">
-                     <p> {{ project.type }} </p>
-                 </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3 ">
-                        <h1>LINK:</h1>
-                     </div>
-                     <div class="col-sm-9 a">
-                        <p> {{ project.link }} </p>
-                    </div>
-                </div>
-                 <div class="row descpt">
-                     <div class="col-sm-3 ">
-                         <h1>DESCRIPTION:</h1>
-                     </div>
-                     <div class="col-sm-9 a">
-                        <p> {{ project.description }} </p>
-                     </div>
-                </div>
-              <br><br>
+            {% for project in projects %}
+            <div class="my-proj">
+                <h3>TITLE: {{ project.title }}</h3>
+                <hr class="custom-hr">
+                <strong><p>DATE_START: </strong>{{ project.created_at|date:"d-m-Y" }}</p>
+                <strong><p>PROGRESS: </strong>{{ project.progress }}</p>
+                <strong><p>TYPE: </strong>{{ project.type }}</p>
+                <strong><p>LINK: </strong>{{ project.link }}</p>
+                <strong><p>DESCRIPTION: </strong><{{ project.description }}</p>
+            </div>
           {% endfor %}
-          </div>
-       </div>
-    </section>
+    </div>
+    </div>
 {% endblock %}

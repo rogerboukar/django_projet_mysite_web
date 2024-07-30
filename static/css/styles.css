@@ -1,61 +1,66 @@
 /* styles.css */
-/* le css de la partie body et html en generale  */
-body,
-html {
-  scrollbar-width: 0px;
+/* le css de la partie body et html en generale */
+
+
+/*
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   color: #333;
   background-color: #e2dbd3;
-  display: block;
   justify-content: center;
   align-items: center;
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica,
-  sans-serif; */
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: yellow;
 }
 
-/* fin du css de la partie body */
+ fin du css de la partie body
 
-/* css de la partie header */
+ css de la partie header
 .header {
-  background-color: white; /* Couleur de fond du header */
+  background-color: white; /* Couleur de fond du header
   color: #000; /* Couleur du texte du header */
-  position: fixed; /* Fixe le header en haut de la fenêtre */
-  width: 100%; /* Occupe toute la largeur de la fenêtre */
-  height: 120px;
-  top: 0; /* Place le header en haut de la fenêtre */
-  z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
-  display: flex; /* Utilisation de flexbox pour aligner les éléments */
-  justify-content: space-between; /* Espace entre les éléments */
-  align-items: center; /* Aligne les éléments au centre verticalement */
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Ombre pour un effet visuel */
+  position: fixed; /* Fixe le header en haut de la fenêtre
+  width: 100%; /* Occupe toute la largeur de la fenêtre
+  height: 150px;
+  top: 0; /* Place le header en haut de la fenêtre
+  z-index: 1000; /* Assure que le header est au-dessus des autres éléments
+  display: flex; /* Utilisation de flexbox pour aligner les éléments
+  justify-content: space-between; /* Espace entre les éléments
+  align-items: center; /* Aligne les éléments au centre verticalement
+
   font-family: "Courier New", Courier, monospace;
 }
 .navbar {
   display: flex;
   justify-content: center;
   width:100%;
+  background-color: orange;
 }
 .name-kr, .name-link {
     flex: 1;
-    margin-top: 20px;
+    height: 120px;
 }
-.name-kr .name-link ul {
+
+.name-link ul {
   flex: 1;
   width:100%;
+  background-color: red;
 }
-.name-kr {
+.name-kr, .name-link {
   padding: 20px;
   text-align: center;
 }
-.name-link {
-  padding: 10px;
-  text-align: center;
-}
 
-.header .name-link ul {
+.name-link ul {
   list-style: none;
   padding-top: 20px;
   display: flex;
@@ -65,7 +70,7 @@ html {
 }
 
 .header .name-link ul li {
-  margin: 0 10px;
+  margin: 0 20px;
   letter-spacing: 2px;
   padding: 10px;
 }
@@ -84,63 +89,50 @@ html {
   border: 2px solid;
 }
 
-/* fin css de la partie header */
+ fin css de la partie header
 
 
-/* css de la premer section */
+ css de la premier section
 
-.container-fluid {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
-    position: relative;
-}
-.section {
-    height: 150%;
-    width: 100%;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica;
-    margin-top: -30px;
-    background-color: #e2dbd3;
+    background-color: green;
+    flex: 1; This makes the container take up the remaining space
+    width: 100vh;
 }
 
-.sect-container {
-    background-color: white;
-    font-family: "Courier New", Courier, monospace;
+.nav-index {
+    background-color: red;
+    height: 150vh;
+    margin-top: 100px;
+    padding: 10px;
 }
 
-.nav-left {
-  height: 130vh;
-  width : 100%;
-  margin-top: 10px;
-  background: linear-gradient(to right, white 40%, #e2dbd3 30% );
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
-  font-family: "Courier New", Courier, monospace;
-}
-.container-fluid .row {
+.container .row-index {
     display: flex;
     justify-content: center;
+    padding: 10;
+    margin: 20px;
     align-items: center;
-    width: 800px; /* Ajustez la largeur selon vos besoins */
-    height: 500px; /* Ajustez la hauteur selon vos besoins */
-    background-color: white; /* Juste pour visualiser la row */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-    /* Ombre principale */ 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre secondaire pour plus de relief */
+    background-color: yellow;
 }
 .col-img {
   flex: 1;
   background-color: #ffa07a;
   height: 100%;
-  padding-top: 30px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un effet visuel */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .col-text {
   flex: 1;
-  padding: 10px 20px 0; /* 20px en haut, 10px à gauche et à droite, 0 en bas */
+  padding: 10px 20px 0;
   background-color: white;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .rounded-image {
@@ -148,8 +140,8 @@ html {
   width: 200px;
 }
 .row .img-photo {
-  justify-content: center; /* Centre les liens horizontalement */
-  align-items: center; /* Centre les liens verticalement */
+  justify-content: center;
+  align-items: center;
   display: flex;
   padding-top: 30px;
 }
@@ -178,29 +170,28 @@ html {
     text-align: center;
 }
 
-/* fin css de la partie section */
+ fin css de la partie section
 
 
 
-/* la partie css du footer */
+ la partie css du footer
 
 .footer {
-  height: 30vh;
-  padding: 20px;
-  background-color: white;
-  display: flex;
-  font-family: 'Poppins', 'Roboto', sans-serif;
-  margin-top: -140px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    display: flex;
 }
 
 .footer .foot-1 {
-  margin-left: 30px;
   width: 500px;
-  height: 200px;
-  margin-right: 320px;
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .footer .foot-1 p {
   margin-right: 50px;
@@ -208,9 +199,8 @@ html {
 
 .footer .foot-2 {
   margin-left: 10px;
-  width: 150px;
-  height: 100px;
   margin-right: 10px;
+  width: 150px;
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   text-align: center;
@@ -249,12 +239,15 @@ html {
 
 .foot-link {
   display: flex;
-  justify-content: center; /* Centre les liens horizontalement */
-  align-items: center; /* Centre les liens verticalement */
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
-/* fin de la partie css du footer  */
+fin de la partie css du footer     */
+
+
+
 
 /* css de la page index partie section et des images de la page index */
 .col-text h1 {
@@ -415,7 +408,7 @@ html {
 
 
 .cv {
- height: 550px;
+ height: 130vh;
   width: 300px;
   background-color: #ffff;
   justify-items: center;

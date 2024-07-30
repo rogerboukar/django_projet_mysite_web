@@ -2,7 +2,12 @@
 {% load static %}
 
 {% block content %}
-    <section class="section nav-contact">
+
+<!-- Main Content Area -->
+    <div id="section5">
+    <div class="container my-5">
+      <!-- Section 1 -->
+        <!-- Content for Section 1 -->
         <div class="login-title">
           <h1>Signup</h1>
         </div>
@@ -20,11 +25,14 @@
 
             <p>Password</p>
             <input type="password" name="password" required />
+                <p></p>
 
-            <button type="submit">S'inscrire</button>
+            <button type="submit" class="btn">S'inscrire</button>
           </form>
           </div>
-
+            <br>
+            <p class="signup"> Vous êtes déjà inscrit? cliquer ici pour vous Connecter <br><a href="{% url 'login' %}" class="btn ">S'Connecter</a></p>
+         </div>
         </div>
       </div>
 

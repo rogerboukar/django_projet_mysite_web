@@ -2,7 +2,12 @@
 {% load static %}
 
 {% block content %}
-    <section class="section nav-contact">
+
+    <!-- Main Content Area -->
+    <div id="section5">
+    <div class="container my-5">
+      <!-- Section 1 -->
+        <!-- Content for Section 1 -->
         <div class="login-title">
           <h1>Login</h1>
         </div>
@@ -10,7 +15,7 @@
         <div class="container-login">
           <div class="row-login">
              <h1>Formulaire de Connection</h1>
-          </div>
+         </div>
           <div class="form-login">
 
             <form action="{% url 'login' %}" method="POST" class="login-form">
@@ -20,13 +25,16 @@
 
             <p>Password</p>
             <input type="password" name="password" required autocomplete="current-password" />
-
-            <button type="submit" class="btn btn-primary">Connecter</button>
+                <p></p>
+            <button type="submit" class="btn">Connecter</button>
           </form>
           </div>
+            <br>
+            <p class="signup"> Vous n'êtes pas encore inscrit? cliquer ici pour vous inscrire <br><a href="{% url 'signup' %}" class="btn ">S'inscrire</a></p>
 
         </div>
       </div>
+    </div>
 
     </section>
 {% endblock %}
